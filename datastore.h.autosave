@@ -1,0 +1,30 @@
+#ifndef DATASTORE_H
+#define DATASTORE_H
+
+#include <QObject>
+#include <QDate>
+#include <QTime>
+#include <QVector>
+#include <StructuresList.h>
+
+
+
+
+
+class DataStore : public QObject
+{
+    Q_OBJECT
+public:
+    explicit DataStore(QObject *parent = nullptr);
+
+private:
+    QVector<MeasurementStruc> MeasureList;
+    QVector<MeetTimeList> MeetInfList;
+    
+    QVector<RequestBody> RequestQueue;
+    QVector<AnswerStruct> AnswerQueue;
+    
+
+};
+
+#endif // DATASTORE_H

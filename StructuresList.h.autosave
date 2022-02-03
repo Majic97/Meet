@@ -1,0 +1,41 @@
+#ifndef STRUCTURESLIST_H
+#define STRUCTURESLIST_H
+
+#include <QDate>
+#include <QTime>
+
+struct MeasurementStruc{
+    unsigned short int MeetID;
+    char Temp;
+    char Hum;
+    QDate date;
+    QTime time;
+};
+
+struct MeetTimeList{
+    unsigned short int MeetID;
+    QDate dataBegin;
+    QTime timeBegin;
+    QDate dataEnd;
+    QTime timeEnd;
+};
+
+struct RequestBody{
+    unsigned char Source;
+    unsigned char TypeOfrequest;
+    unsigned short int MeetID;
+    unsigned short int SensorId;
+    QString Message;
+};
+
+struct AnswerStruct{
+    unsigned char Source;
+    unsigned char TypeOfRequest;
+    unsigned short int MeetID;
+    unsigned short int SensorID;
+    QVector<MeasurementStruc> Data;
+    QString Message;
+};
+
+
+#endif // STRUCTURESLIST_H
