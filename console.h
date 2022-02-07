@@ -5,6 +5,7 @@
 #include <QCoreApplication>
 #include <QTextStream>
 #include <QDebug>
+#include "StructuresList.h"
 
 
 class Console : public QObject
@@ -18,6 +19,7 @@ public:
 
 private:
     QCoreApplication *a;
+    QVector<AnswerStruc> answerPool;
 
 
 

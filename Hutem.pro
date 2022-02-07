@@ -13,7 +13,8 @@ SOURCES += \
         handler.cpp \
         main.cpp \
         mainclass.cpp \
-        measuresensor.cpp
+        measuresensor.cpp\
+        sensor/sensor.cpp
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -26,4 +27,5 @@ HEADERS += \
     datastore.h \
     handler.h \
     mainclass.h \
-    measuresensor.h
+    measuresensor.h\
+    sensor/sensor.h

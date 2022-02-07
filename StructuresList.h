@@ -36,4 +36,6 @@ struct AnswerStruc{
     QString Message;
 };
 
+
+
 #endif // STRUCTURESLIST_H
