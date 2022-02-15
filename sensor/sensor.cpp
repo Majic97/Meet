@@ -1,12 +1,6 @@
 #include "sensor/sensor.h"
 
 
-
-Sensor::Sensor()
-{
-
-}
-
 QPair<double, double> Sensor::getDataFromSensor()
 {
     QPair<double,double> value;
@@ -18,8 +12,8 @@ QPair<double, double> Sensor::getDataFromSensor()
             return value;
         }
 
-    value.first = GetTemperature(fd);
-    value.second = GetTemperature(fd);
+    value.first = GetTemperature(gfd);
+    value.second = GetTemperature(gfd);
     return value;
 }
 
@@ -54,11 +48,9 @@ bool Sensor::StartListening()
     wiringPiSetup();
     int fd = wiringPiI2CSetup(HTU21D_I2C_ADDR);
     if ( 0 > fd )
-    {
-//        fprintf (stderr, "Unable to open I2C device: %s\n", strerror (errno));
-//        exit (-1);
         return false;
-    }
-    this->fd = fd;
+
+    isAlreadySwitchOn=true;
+    gfd = fd;
     return true;
 }

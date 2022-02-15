@@ -7,7 +7,7 @@
 #define   HTU21D_HUMID    0xF5
 
 static bool isAlreadySwitchOn = false;
-static int fd;
+static int gfd = -1;
 
 #include <QObject>
 #include <stdio.h>

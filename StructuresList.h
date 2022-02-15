@@ -4,9 +4,8 @@
 #include <QTime>
 
 struct MeasurementStruc{
-    unsigned short int MeetID;
     char Temp;
-    char Hum;
+    unsigned char Hum;
     QDate Date;
     QTime Time;
 };
