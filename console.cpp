@@ -16,8 +16,10 @@ bool Console::Switch_On_Console()
     qout << "Type your command: " << Qt::endl;
     name = qin.readLine();
     qout << Qt::endl;
-    if(name == "exit")
-        break;
+    if(name == "On")
+        qDebug()<< "==" << HandlerObj.SwitchOnSensor()<< Qt::endl;
+    if(name=="Data")
+        qDebug()<< "==" << HandlerObj.getLastTenValues() << Qt::endl;
     }
 
     return true;

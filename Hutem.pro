@@ -13,7 +13,6 @@ SOURCES += \
         handler.cpp \
         main.cpp \
         mainclass.cpp \
-        measuresensor.cpp\
         sensor/sensor.cpp
 
 # Default rules for deployment.
@@ -27,5 +26,4 @@ HEADERS += \
     datastore.h \
     handler.h \
     mainclass.h \
-    measuresensor.h\
     sensor/sensor.h
