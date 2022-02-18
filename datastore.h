@@ -19,7 +19,7 @@ class DataStore : public QObject
     Q_OBJECT
 public:
     explicit DataStore(QObject *parent = nullptr);
-    bool SwitcOnSensor();
+    bool SwitchOnSensor();
     QVector<MeasurementStruc> getLastTenValues();
 
 private:

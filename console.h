@@ -6,7 +6,7 @@
 #include <QTextStream>
 #include <QDebug>
 #include "StructuresList.h"
-
+#include "handler.h"
 
 class Console : public QObject
 {
@@ -16,6 +16,8 @@ public:
     bool Switch_On_Console();
     int exec();
 
+
+    Handler HandlerObj;
 
 private:
     QCoreApplication *a;

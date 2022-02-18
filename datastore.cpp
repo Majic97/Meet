@@ -5,7 +5,7 @@ DataStore::DataStore(QObject *parent) : QObject(parent)
 
 }
 
-bool DataStore::SwitcOnSensor()
+bool DataStore::SwitchOnSensor()
 {
     try{
         IsLesteningNow=true;
@@ -22,7 +22,18 @@ bool DataStore::SwitcOnSensor()
 
 QVector<MeasurementStruc> DataStore::getLastTenValues()
 {
+    QVector<MeasurementStruc> value;
+    if(isAlreadySwitchOn)
     return getDataFromMeasureStore();
+    else{
+        if(SwitchOnSensor())
+        {
+            QThread::sleep(70);
+            return getDataFromMeasureStore();
+        }else
+            return value;
+    }
+
 }
 
 void DataStore::ListenSensor()
